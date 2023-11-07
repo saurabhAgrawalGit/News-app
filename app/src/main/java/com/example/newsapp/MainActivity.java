@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayoutin;
     TabItem homein,sciencein,sportin,entertainmentin,techin,healthin;
     ViewPager viewPager;
+    String api ="14f9b3ad155f45be9c4234a3c49ebf37";
+
     pagerAdapter pagerAdapterOBJ;
 
     @Override
