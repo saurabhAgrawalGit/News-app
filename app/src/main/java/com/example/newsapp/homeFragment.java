@@ -59,4 +59,10 @@ public class homeFragment extends Fragment {
             }
         });
     }
+
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        modelClassArrayList.clear();
+//    }
 }
