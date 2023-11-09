@@ -49,12 +49,11 @@ public class homeFragment extends Fragment {
             public void onResponse(Call<MainNews> call, Response<MainNews> response) {
                 modelClassArrayList.addAll(response.body().getArticles());
                 objAdapter.notifyDataSetChanged();
-                Log.e( "array one : ",modelClassArrayList.get(0).title);
+
             }
 
             @Override
             public void onFailure(Call<MainNews> call, Throwable t) {
-                Log.e( "onFailure: ", t.toString());
 
             }
         });
