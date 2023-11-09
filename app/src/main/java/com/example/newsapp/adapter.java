@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -34,7 +35,7 @@ public class adapter  extends RecyclerView.Adapter<adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull adapter.ViewHolder holder, int position) {
-        holder.heading.setOnClickListener(new View.OnClickListener() {
+        holder.constraintLayou.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context,webView.class);
@@ -44,6 +45,8 @@ public class adapter  extends RecyclerView.Adapter<adapter.ViewHolder> {
             }
 
         });
+
+
 
         holder.heading.setText(modelClassesList.get(position).getTitle());
         holder.des.setText(modelClassesList.get(position).getDescription());
@@ -59,12 +62,14 @@ public class adapter  extends RecyclerView.Adapter<adapter.ViewHolder> {
 
         TextView heading , des,a,b,c;
         ImageView imageView;
+        ConstraintLayout  constraintLayou;
         public ViewHolder(@NonNull View view)
         {
             super(view);
             heading=view.findViewById(R.id.headline);
             des=view.findViewById(R.id.des);
             imageView=view.findViewById(R.id.img);
+            constraintLayou=view.findViewById(R.id.click);
         }
     }
 }
